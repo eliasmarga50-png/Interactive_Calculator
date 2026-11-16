@@ -2,57 +2,69 @@
 body {
     font-family: Arial, sans-serif;
     background-color: white;
-    margin: 20px;
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
-    color: #0875e1;
-    font-size: 48px;
-    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .calculator {
-    margin: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input {
-    display: block;
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
-    font-size: 18px;
-    box-sizing: border-box;
-}
-
+input,
 select {
-    display: block;
     width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
-    font-size: 18px;
-    background-color: white;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 button {
-    background-color: #0875e1;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
     color: white;
-    padding: 12px 18px;
     border: none;
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin-top: 0;
+}
+
+#clearButton {
+    background-color: #6c757d;
+}
+
+#clearButton:hover {
+    background-color: #545b62;
+}
 
 #result {
     background-color: black;
@@ -70,20 +82,16 @@ button:hover {
     display: none;
 }
 
-
-
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: 34px;
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
     }
 
     .calculator {
-        margin: 10px;
+        padding: 15px;
     }
 
-    input,
-    select {
-        font-size: 16px;
+    .buttons {
+        flex-direction: column;
     }
 }
